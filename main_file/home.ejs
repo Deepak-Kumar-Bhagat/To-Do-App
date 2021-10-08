@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/eefa3fa24d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="big-container">
+        <h1 class="heading">TODO App</h1>
+        <div class="container1">
+            <form action="/list" method="POST">
+                <p class="paragraph">DESCREPTION</p>
+                <textarea name="task" id="textarea" cols="30" rows="10" placeholder="What do you need to do ?" required></textarea>
+                <div class="double">
+                    <div id="category">
+                        <div class="lan">
+                            CATEGORY<br>
+                            choose a category
+                        </div>
+                        <select name="category" id="options" required>
+                            <option>PERSONAL</option>
+                            <option>WORK</option>
+                            <option>SCHOOL</option>
+                            <option>CLEANING</option>
+                            <option>OTHER</option>
+                        </select>
+                   </div>
+                   <div id="date">DUE DATE<br>
+                        <input type="date" name="date" required>
+                   </div>
+                </div>
+                <div class="btn-box">
+                    <button type="submit" id="task"><span><i class="fas fa-plus"></i></span> ADD TASK</button>
+                </div>
+           </form>
+        </div>        
+       <div>
+           <div class="heading" id="task-list">TASKS LIST</div>
+               <form action="/delete" method="GET">
+                   <table class="table">
+                       <thead>
+                          <tr>
+                            <th>Select</th>
+                            <th>Task</th>
+                            <th>Category</th>
+                            <th>due date</th>
+                          </tr>
+                        </thead>
+                        <% for(let i of task) { %>
+                            
+                            <tr>
+                              <td> <input type="checkbox" name="<%= i._id %>"></td>
+                               <td> <p id="task-description"><%= i.task %></p></td>
+                               <td><p id="task-description">: <%= i.category %></p></td>
+                               <td><p id="task-description">: <%= i.date %></p></td>
+                            </tr>                                    
+                       <% } %>                                  
+                   </table>
+                   <div class="btn-box">
+                        <button type="submit" id="delete"><span><i class="fas fa-trash-alt"></i></span> DELETE TASKS</button>
+                    </div>
+               </form>
+        <div>
+    </section>
+</body>
+</html>

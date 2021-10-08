@@ -1,0 +1,126 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+.big-container{
+    border: 2px solid lightgrey;
+    margin: 0rem 15rem;
+}
+.heading{
+    text-align: center;
+    /*border-bottom: 2px solid gray;*/
+    font-weight: 400;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+    opacity: 0.8;
+    color: white;
+    background-color: rgb(70, 70, 218);
+}
+#textarea{
+    width: 100%;
+    height: 6rem;
+    padding:0.8rem 0rem 0rem 2rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.double{
+    display: flex;
+    flex-wrap: wrap;
+}
+.paragraph{
+    padding: 1rem 0rem 1rem 2rem;
+    font-weight: 600;
+    opacity: 0.7;
+    font-size: 1.5rem;
+    border-bottom: 2px solid lightgrey;
+    border-top: 2px solid lightgrey;
+}
+#category{
+    border-top: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    flex: 1 1 25rem;
+    opacity: 0.7;
+    padding: 0.8rem 2rem 2rem 2rem;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+#options{
+    border: none;
+    cursor: pointer;
+}
+#options option{
+    opacity: 0.7;
+    cursor: pointer;
+}
+#date{
+    border-top: 2px solid lightgrey;
+    border-left: 2px solid lightgrey;
+    border-bottom: 2px solid lightgrey;
+    width: 50%;
+    flex: 1 1 25rem;
+    padding: 0.8rem 0rem 2rem 2rem;
+    font-weight: 600;
+    opacity: 0.7;
+    font-size: 1.3rem;
+}
+#date input{
+    margin-top: 0.5rem;
+    border:2px solid lightgray;
+    cursor: pointer;
+}
+.btn-box{
+    text-align: center;
+    padding: 1.5rem 0rem;
+    border-bottom: 2px solid lightgrey;
+}
+#task{
+    padding: 2rem 4rem;
+    font-size: 2.5rem;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    border: 2px solid rgb(97, 73, 73);
+}
+#task:hover{
+    box-shadow: 0rem 0rem 0.3rem 0.2rem gray;
+    border: none;
+}
+#delete{
+    flex: 1 1 25rem;
+    padding: 2rem 2rem;
+    font-size: 2.5rem;
+    color: white;
+    background-color: rgb(201, 41, 41);
+    border: none;
+    cursor: pointer;
+    border: 2px solid rgb(151, 20, 20);
+}
+#delete:hover{
+    box-shadow: 0rem 0rem 0.3rem 0.2rem gray;
+    border: none;
+}
+thead tr th{
+    color: gray;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+#task-description{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    opacity: 0.8;
+}
+#task-list{
+    background-color: rgb(37, 165, 37);
+    color: white;
+}
